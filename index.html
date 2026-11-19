@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permainan Acak Kata</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game-container">
+    <h1>Permainan Acak Kata</h1>
+    <p class="subtitle">Susun huruf-huruf berikut menjadi kata yang benar!</p>
+
+    <section class="score-board" aria-label="Informasi permainan">
+      <span>Skor: <strong id="score">0</strong></span>
+      <span>Soal: <strong id="question">1</strong>/10</span>
+    </section>
+
+    <p class="instruction">Susun huruf berikut:</p>
+    <div class="scrambled-word" id="scrambledWord" aria-live="polite">...</div>
+    <div class="hint" id="hint">Petunjuk akan muncul di sini.</div>
+
+    <label class="sr-only" for="answer">Jawaban kamu</label>
+    <input
+      type="text"
+      id="answer"
+      placeholder="Masukkan jawabanmu..."
+      autocomplete="off"
+      autocapitalize="characters"
+    >
+
+    <p id="message" class="message" aria-live="polite"></p>
+
+    <div class="buttons">
+      <button class="check-btn" id="checkBtn">Periksa Jawaban</button>
+      <button class="next-btn" id="nextBtn">Soal Berikutnya</button>
+      <button class="restart-btn" id="restartBtn">Ulangi Permainan</button>
+    </div>
+
+    <p class="footer">Asah kemampuan kosakatamu sambil bermain!</p>
+  </main>
+</body>
+</html>
